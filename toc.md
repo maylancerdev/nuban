@@ -1,26 +1,26 @@
-- [Introduction](/introduction)
-- [Requirments](/requirements)
-- [Changelogs](changelog)
+- [Introduction](introductio.md)
+- [Requirments](requirment.md)
+- [Changelogs](changelo.md)
 
 
 - Introduction
-    - [Getting Started](/introduction/getting-started/)
-    - [FAQ's](/introduction/faq's/)
+    - [Getting Started](/introduction/getting-started.md)
+    - [FAQ's](/introduction/faqs.md)
 
 
 - Guide
-    - [Jquery code](/guide/jquery-code/)
-    - [PHP Code](/guide/php-code/)
-    - [Python Code](/guide/python-code/)
-    - [Javascript Code](/guide/javascript-code/)
-    - [Java Code](/guide/java-code/)
-    - [C# Code](/guide/c#-code/)
+    - [Jquery code](/guide/jquery-code.md)
+    - [PHP Code](/guide/php-code.md)
+    - [Python Code](/guide/python-code.md)
+    - [Javascript Code](/guide/javascript-code.md)
+    - [Java Code](/guide/java-code.md)
+    - [C# Code](/guide/c#-code.md)
 
 
 - Response
-    - [Success](/response/success/)
-    - [Error](/response/error/)
+    - [Success](/response/success.md)
+    - [Error](/response/error.md)
 
 
 - Support
-    - [Help](/support/help/)
+    - [Help](/support/help.md)
