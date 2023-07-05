@@ -1,1 +1,1 @@
-All notable changes to laravel-markdown are documented [on GitHub](https://github.com/maylancerdev/nuban/blob/main/CHANGELOG.md)
+All notable changes to Real-time Nigeria Bank Account validation API are documented [on Changelog](https://maylancer.org/api/nuban/changelog)
