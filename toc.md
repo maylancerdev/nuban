@@ -1,33 +1,26 @@
-- Prologue
-	- [Release Notes](changelog.md)
-	- [Upgrade Guide](upgrade.md)
+- [Introduction](introduction)
+- [Requirments](requirments)
+- [Changelogs](changelog)
+
 
 - Introduction
-    - [Get Started](introduction/getting-started.md)
-    - [Quickstart](introduction/faq.md)
-    - [How-to](howto.md)
+    - [Getting Started](/introduction/getting-started/)
+    - [FAQ's](/introduction/faq's/)
 
-- Configuration
-    - [PHP](configphp.md)
-    - [JavaScript](configjs.md)
 
-- API
-    - [PHP](apiphp.md)
-    - [JavaScript](apijs.md)
+- Guide
+    - [Jquery code](/guide/jquery-code/)
+    - [PHP Code](/guide/php-code/)
+    - [Python Code](/guide/python-code/)
+    - [Javascript Code](/guide/javascript-code/)
+    - [Java Code](/guide/java-code/)
+    - [C# Code](/guide/c#-code/)
 
-- Plugins
-    - [UI](ui.md) 
-	- [Drop](drop.md)
-    - [Crop](crop.md) 
-    - [Camera](camera.md)
 
-- Integration
-    - [Yii 2](yii2.md)
-    - [Laravel](laravel.md)
-    - [CakePHP 3](cakephp.md)
-    - [CodeIgniter 3](codeigniter.md)
-    - [Zend Framework 2](zf2.md)
+- Response
+    - [Success](/response/success/)
+    - [Error](/response/error/)
 
-- Extra
-    - [Debugging](debugging.md)
-    - [Credits](credits.md)
+
+- Support
+    - [Help](/support/help/)

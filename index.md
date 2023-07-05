@@ -1,6 +1,3 @@
----
-next:  { text: 'Get Started', link: '/introduction/getting-started'}
----
 
 # Real-time Nigeria Bank Account validation API.
 
