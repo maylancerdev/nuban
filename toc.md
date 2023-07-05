@@ -1,5 +1,5 @@
-- [Introduction](introduction)
-- [Requirments](requirments)
+- [Introduction](/introduction)
+- [Requirments](/requirements)
 - [Changelogs](changelog)
 
 
