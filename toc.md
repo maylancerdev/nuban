@@ -1,6 +1,7 @@
-- [Introduction](introduction.md)
-- [Requirments](requirement.md)
-- [Changelogs](changelog.md)
+-
+	- [Introduction](introduction.md)
+	- [Requirments](requirement.md)
+	- [Changelogs](changelog.md)
 
 
 - Introduction
@@ -23,4 +24,4 @@
 
 
 - Support
-    - [Help](/support/help.md)
+    - [Help](support/help.md)

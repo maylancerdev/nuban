@@ -19,7 +19,7 @@ The `/api.php` endpoint will respond with JSON:
 An example of a account successfully lookup:
 
 
-```JSON
+```php
 {
     "account_number": "123567890",
     "account_name": "CHIDUBEM IJENDU",

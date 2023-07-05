@@ -3,7 +3,7 @@
 Here's an illustration of an instance where incorrect account information has been provided:
 
 
-```JSON
+```php
 {
     "message": "Try again. Unable to get bank details",
     "status": "error"
@@ -13,7 +13,7 @@ Here's an illustration of an instance where incorrect account information has be
 Or when a required variable, such as the account number or bank code, is missing:
 
 
-```JSON
+```php
 {
     "message": "Only 10-digits account number is allowed",
     "status": "error"
