@@ -1,6 +1,6 @@
 -
 	- [Introduction](introduction.md)
-	- [Requirments](requirement.md)
+	- [Requirments](requirements.md)
 	- [Changelogs](changelog.md)
 
 
