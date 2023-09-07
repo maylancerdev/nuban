@@ -23,7 +23,7 @@
     - [Error](response/error.md)
 
 - Clients
-    - [laravel](clients/laravel.md)
+    - [Laravel](clients/laravel.md)
 
 - Support
     - [Help](support/help.md)
