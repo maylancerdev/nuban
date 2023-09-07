@@ -4,7 +4,6 @@
 ## Curl 7.34.0 or more recent ([Unless using Guzzle](#php-8-using-guzzle-for-making-http-requests))
 
 ```php
-<?php
 
 /**
  * Makes an API call using cURL.
@@ -38,7 +37,10 @@ function callAPI($method, $url, $data) {
     // Set common cURL options
     curl_setopt_array($curl, [
         CURLOPT_URL => $url,
-        CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+        CURLOPT_HTTPHEADER => [
+            'Content-Type: application/json',
+            'Authorization: Bearer Your_Bearer_Token' // Replace with your actual Bearer token
+        ],
         CURLOPT_RETURNTRANSFER => true,
         CURLOPT_HTTPAUTH => CURLAUTH_BASIC
     ]);
@@ -59,12 +61,12 @@ function callAPI($method, $url, $data) {
 }
 
 // Define the API endpoint URL
-$url = 'https://maylancer.org/api/nuban/api.php';
+$url = 'http://nubapi.test/api/verify';
 
 // Set the API parameters
 $params = [
-    'account_number' => '{account_number}',
-    'bank_code' => '{code}'
+    'account_number' => '12345678910',
+    'bank_code' => '999992'
 ];
 
 try {
@@ -75,27 +77,15 @@ try {
     $response = json_decode($get_data, true);
 
     // Process the API response
-    if (isset($response['account_name'])) {
-        $name = explode(' ', $response['account_name']);
-        $firstName = $name[0];
-        $lastName = end($name);
-
-        $data = [
-            "firstname" => $firstName,
-            "lastname" => $lastName,
-            "account_name" => $response['account_name'],
-            "account_number" => $response['account_number'],
-            "bank_name" => $response['Bank_name'],
-            "status" => 'success'
-        ];
-    } else {
-        $errorMessage = 'Invalid account number entered, ' . $response['message'];
-
-        $data = [
-            "message" => $errorMessage,
-            "status" => 'error'
-        ];
-    }
+    $data = [
+        "firstname" => $response['first_name'],
+        "lastname" => $response['last_name'],
+        "othername" => $response['other_name'],
+        "account_name" => $response['account_name'],
+        "account_number" => $response['account_number'],
+        "bank_name" => $response['Bank_name'],
+        "status" => 'success'
+    ];
 
     // Output the result as JSON
     echo json_encode($data, JSON_PRETTY_PRINT);
@@ -111,7 +101,6 @@ try {
     echo json_encode($data, JSON_PRETTY_PRINT);
 }
 
-?>
 
 ```
 
@@ -119,7 +108,7 @@ try {
 ## PHP 8 version
 
 ```php
-<?php
+
 
 /**
  * Makes a cURL API call.
@@ -150,7 +139,10 @@ function callAPI(string $method, string $url, mixed $data): mixed {
    // OPTIONS:
    curl_setopt_array($curl, [
       CURLOPT_URL => $url,
-      CURLOPT_HTTPHEADER => ['Content-Type: application/json'],
+      CURLOPT_HTTPHEADER => [
+         'Content-Type: application/json',
+         'Authorization: Bearer Your_Bearer_Token' // Replace with your actual Bearer token
+      ],
       CURLOPT_RETURNTRANSFER => 1,
       CURLOPT_HTTPAUTH => CURLAUTH_BASIC
    ]);
@@ -164,12 +156,12 @@ function callAPI(string $method, string $url, mixed $data): mixed {
 }
 
 // API endpoint URL
-$url = 'https://maylancer.org/api/nuban/api.php';
+$url = 'http://nubapi.test/api/verify';
 
 // API parameters
 $params = [
-   'account_number' => '{account_number}',
-   'bank_code' => '{code}'
+   'account_number' => '12345678910',
+   'bank_code' => '999992'
 ];
 
 // Make the API call
@@ -179,32 +171,19 @@ $get_data = callAPI('GET', $url, $params);
 $response = json_decode($get_data, true);
 
 // Process the API response
-if (isset($response['account_name'])) {
-   $name = explode(' ', $response['account_name']);
-   $firstName = $name[0];
-   $lastName = end($name);
-
-   $data = [
-      "firstname" => $firstName,
-      "lastname" => $lastName,
-      "account_name" => $response['account_name'],
-      "account_number" => $response['account_number'],
-      "bank_name" => $response['Bank_name'],
-      "status" => 'success'
-   ];
-} else {
-   $errorMessage = 'Invalid account number entered, ' . $response['message'];
-
-   $data = [
-      "message" => $errorMessage,
-      "status" => 'error'
-   ];
-}
+$data = [
+   "firstname" => $response['first_name'],
+   "lastname" => $response['last_name'],
+   "othername" => $response['other_name'],
+   "account_name" => $response['account_name'],
+   "account_number" => $response['account_number'],
+   "bank_name" => $response['Bank_name'],
+   "status" => 'success'
+];
 
 // Output the result as JSON
 echo json_encode($data, JSON_PRETTY_PRINT);
 
-?>
 
 ```
 
@@ -236,6 +215,7 @@ require_once 'vendor/autoload.php';
 You can then proceed to use Guzzle to make HTTP requests. 
 
  ```php
+
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 
@@ -244,32 +224,33 @@ try {
 
     $queryParams = [
         'account_number' => '12345678910',
-        'bank_code' => '421'
+        'bank_code' => '999992'
     ];
 
-    $response = $client->get('https://maylancer.org/api/nuban/api.php', [
-        'query' => $queryParams
+    $response = $client->get('http://nubapi.test/api/verify', [
+        'query' => $queryParams,
+        'headers' => [
+            'Authorization' => 'Bearer Your_Bearer_Token' // Replace with your actual Bearer token
+        ]
     ]);
 
     $data = json_decode($response->getBody(), true);
 
     $accountName = $data['account_name'];
+    $firstName = $data['first_name'];
+    $lastName = $data['last_name'];
+    $otherName = $data['other_name'];
     $accountNumber = $data['account_number'];
     $bankCode = $data['bank_code'];
     $bankName = $data['Bank_name'];
-    $status = $data['status'];
-    $executionTime = $data['execution_time'];
-
-    [$firstName, $lastName] = explode(' ', $accountName);
 
     echo "Account Name: $accountName" . PHP_EOL;
+    echo "First Name: $firstName" . PHP_EOL;
+    echo "Last Name: $lastName" . PHP_EOL;
+    echo "Other Name: $otherName" . PHP_EOL;
     echo "Account Number: $accountNumber" . PHP_EOL;
     echo "Bank Code: $bankCode" . PHP_EOL;
     echo "Bank Name: $bankName" . PHP_EOL;
-    echo "Status: $status" . PHP_EOL;
-    echo "Execution Time: $executionTime" . PHP_EOL;
-    echo "First Name: $firstName" . PHP_EOL;
-    echo "Last Name: $lastName" . PHP_EOL;
 } catch (RequestException $e) {
     echo 'API Request Error: ' . $e->getMessage();
 }

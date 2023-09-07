@@ -27,31 +27,30 @@ Code example:
 
 ```javascript
 
-import axios
+import axios from 'axios';
 
-   axios.get('https://maylancer.org/api/nuban/api.php', {
-     params: {
-       account_number: '12345678910',
-       bank_code: '421'
-     }
-   })
-     .then((response) => {
-       const { account_name, account_number, bank_code, bank_name, status, execution_time } = response.data;
-       console.log(account_name);
-       console.log(account_number);
-       console.log(bank_code);
-       console.log(bank_name);
-       console.log(status);
-       console.log(execution_time);
-
-       // Here are some useful code to get user first and last name
-       let names = account_name.replace(/\s{2,}/g, ' ').split(' ');
-       let firstName = names[0];
-       let lastName = names[1];
-     })
-     .catch((error) => {
-       console.error('An error occurred:', error);
-     });
+axios.get('http://nubapi.test/api/verify', {
+    headers: {
+        'Authorization': 'Bearer Your_Bearer_Token' // Replace with your actual Bearer token
+    },
+    params: {
+        account_number: '12345678910',
+        bank_code: '999992'
+    }
+})
+    .then((response) => {
+        const { account_name, first_name, last_name, other_name, account_number, bank_code, Bank_name } = response.data;
+        console.log(account_name);
+        console.log(first_name);
+        console.log(last_name);
+        console.log(other_name);
+        console.log(account_number);
+        console.log(bank_code);
+        console.log(Bank_name);
+    })
+    .catch((error) => {
+        console.error('An error occurred:', error);
+    });
 
 
 ```
@@ -69,35 +68,32 @@ Download jQuery: Visit the official [jQuery website](https://jquery.com/) and do
 Code example using jQuery's $.ajax() function to make an HTTP GET request: 
 
 ```javascript 
-
 $.ajax({
-  url: 'https://maylancer.org/api/nuban/api.php',
-  method: 'GET',
-  data: {
-    account_number: '12345678910',
-    bank_code: '421'
-  },
-  success: (response) => {
-    console.log(response.account_name);
-    console.log(response.account_number);
-    console.log(response.bank_code);
-    console.log(response.bank_name);
-    console.log(response.status);
-    console.log(response.execution_time);
-
-    // Here are some useful code to get user first and last name
-    let names = response.account_name.replace(/\s{2,}/g, ' ').split(' ');
-    let firstName = names[0];
-    let lastName = names[1];
-  },
-  error: (xhr, status, error) => {
-    console.error(`An error occurred: ${error}`);
-  }
+    url: 'http://nubapi.test/api/verify',
+    method: 'GET',
+    headers: {
+        'Authorization': 'Bearer Your_Bearer_Token' // Replace with your actual Bearer token
+    },
+    data: {
+        account_number: '12345678910',
+        bank_code: '999992'
+    },
+    success: (response) => {
+        console.log(response.account_name);
+        console.log(response.first_name);
+        console.log(response.last_name);
+        console.log(response.other_name);
+        console.log(response.account_number);
+        console.log(response.bank_code);
+        console.log(response.Bank_name);
+    },
+    error: (xhr, status, error) => {
+        console.error(`An error occurred: ${error}`);
+    }
 });
+
 
 ```
 
 
-::: tip
-Please make sure you provided the request parameters (account_number and bank_code) as an object in the params property
-:::
+Please replace "Your_Bearer_Token" with your actual Bearer token. Also, make sure to replace 12345678910 and 999992 with the actual account number and bank code you want to retrieve.

@@ -1,31 +1,17 @@
 
 # Real-time Nigeria Bank Account validation API.
 
-We are delighted to introduce our cutting-edge API that offers real-time validation for bank accounts in Nigeria. Our robust and reliable solution allows you to seamlessly verify the authenticity of bank account details, ensuring accurate and secure transactions.
+Introducing our advanced API for real-time validation of Nigerian bank accounts. Seamlessly verify account details, ensuring secure transactions. Easily integrate this functionality into your applications for a streamlined user experience.
 
-With our API, you can effortlessly integrate bank account validation functionality into your applications, providing your users with a streamlined and error-free experience. Whether you are building a payment gateway, developing a financial application, or enhancing your e-commerce platform, our API empowers you with the tools to validate Nigeria bank accounts in real-time.
-
-Say goodbye to manual verification processes and embrace the speed, efficiency, and accuracy of our Real-time Nigeria Bank Account Validation API. Explore our comprehensive documentation, access developer resources, and get started today to revolutionize the way you validate bank accounts in Nigeria.
-
-Experience the power of real-time validation and unlock a new level of trust and confidence in your financial transactions with our advanced API. Welcome to a world of seamless and secure bank account validation.
-
+Our API is perfect for payment gateways, financial applications, or e-commerce platforms. Say goodbye to manual verification and embrace the speed and efficiency of our API.
 
 ![examples](/images/carbon.png)
 
 
-Our free bank API allows you to swiftly lookup bank account details for any bank in Nigeria, enabling you to accelerate application development. With this powerful tool, you can retrieve bank account information within seconds, streamlining the process and helping you build applications more efficiently. Take advantage of our bank API to enhance your development workflow and expedite the creation of robust and feature-rich applications.
-
-::: tip
-:bell: Our API is higly secure and our system do not store any bank record
-:::
+Our free API allows swift lookup of Nigerian bank account details, accelerating your application development. Retrieve account information within seconds, enhancing your workflow.
 
 
-
-In many cases, verifying the account owner's name is essential for verification purposes. Instead of going through the hassle of logging into your internet banking and initiating a transfer for confirmation, our simple tool can handle this task effortlessly.
-
-
-By integrating our tool, you can automate the process of retrieving the account owner's name. All you need to do is provide a user interface that allows users to select the bank and enter the account number. Our system will take care of the heavy lifting by extracting the relevant information associated with the provided account. This seamless solution eliminates the need for manual verification and provides a reliable mechanism for quickly obtaining the account owner's name.
-
+Our tool automates the retrieval of the account owner's name, eliminating the need for manual verification. Simply provide a user interface for bank selection and account number entry, and our system handles the rest.
 
 
 
@@ -56,4 +42,4 @@ By integrating our tool, you can automate the process of retrieving the account 
 
 
 
-**Built by Developer, for Developer**
+**Built by Developers, for Developers**

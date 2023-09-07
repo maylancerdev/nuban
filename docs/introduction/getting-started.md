@@ -3,29 +3,29 @@
 
 We are grateful for your patronage and reliance on our products and services. It is important to note that our API Key provides unrestricted access without any limitations or expiration. You have the privilege of utilizing it across an unlimited number of websites.
 
-With our endpoint, you gain access to a comprehensive account number verification feature for all banks in Nigeria. We ensure that the bank list is consistently updated, relieving you of any concerns regarding outdated or incomplete information. Rest assured that you can rely on the accuracy and reliability of our bank listings.
+Before you can start using the Real-time Nigeria Bank Account Validation API, you need to sign up and generate an API token. Follow the steps below to get started:
 
+## Step 1: Sign Up
 
-## SIMPLE GET API URL
+1. Visit the [Sign Up](https://nubapi.com/register) page.
+2. Fill in the required details and click on the 'Register' button.
 
-Replace account number with your account number and bank code to get account name of any bank account
+## Step 2: Log In
 
+1. After successful registration, visit the [Log In](https://nubapi.com/login) page.
+2. Enter your credentials and click on the 'Log In' button.
 
-```bash
-https://maylancer.org/api/nuban/api.php?account_number={account_number}&bank_code={code}
-```
+## Step 3: Generate API Token
 
+1. Once you are logged in, navigate to the [API Tokens](https://nubapi.com/user/api-tokens) page.
+2. Click on the 'Create' button. This will create a new API token and keep it safe because you can only view the generated token once.
 
-Get user account details simple by using their account number without the bank code.
+Remember to keep your API token secure. Do not share it with anyone. You will use this token to authenticate your requests to the API.
 
+Congratulations! You are now ready to start using the Real-time Nigeria Bank Account Validation API.
 
-```bash
-https://maylancer.org/api/nuban/api.php?account_number={{account_number}}
+## Here are some useful endpoints.
 
-```
-
-::: warning
-:bell: Please note this might be a little bit slower and not recommended
-
-:::
-
+- [Bank Codes List](https://nubapi.com/banks)
+- [Bank HTML List](https://nubapi.com/bank-html)
+- [Bank JSON List](https://nubapi.com/bank-json)

@@ -5,8 +5,8 @@ Here's an illustration of an instance where incorrect account information has be
 
 ```php
 {
-    "message": "Try again. Unable to get bank details",
-    "status": "error"
+    "status": false,
+    "message": "Account information not available, Please try again or verify the submitted details."
 }
 ```
 
@@ -15,8 +15,12 @@ Or when a required variable, such as the account number or bank code, is missing
 
 ```php
 {
-    "message": "Only 10-digits account number is allowed",
-    "status": "error"
+    "success": false,
+    "message": {
+        "account_number": [
+            "The account number field must have at least 10 digits."
+        ]
+    }
 }
 ```
 
