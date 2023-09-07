@@ -74,7 +74,7 @@ This is your API token from nubapi.com (nubapi is completely free for personal, 
 
 ## API Usage
 
-Make sure you obtain your API key and configure your API Token in your application, now you can now in your Laravel application controller add the following code:
+Make sure you obtain your API key and configure your API Token in your application, you can now in your Laravel application controller add the following code:
 
 ```
 use Donejeh\Nuban\Nubapi;
